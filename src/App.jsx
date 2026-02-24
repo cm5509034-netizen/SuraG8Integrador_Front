@@ -2,7 +2,7 @@
 // APP.JSX - VERSIÓN FINAL
 // ✅ Usuarios       ✅ Notificaciones
 // ✅ Profesores     ✅ Cursos
-// ✅ Reportes       ✅ Notas  ⏳ Matrícula
+// ✅ Reportes       ✅ Notas  ✅ Matrícula
 // ====================================
 
 import React from 'react';
@@ -39,12 +39,9 @@ import ListaNotas from './componentes/notas/ListaNotas';
 import CrearNota  from './componentes/notas/CrearNota';
 import EditarNota from './componentes/notas/EditarNota';
 
-/*
-  PRÓXIMOS MÓDULOS — descomenta al implementarlos:
-
-  import ListaMatricula      from './componentes/matricula/ListaMatricula';
-  import FormularioMatricula from './componentes/matricula/FormularioMatricula';
-*/
+// ── Matrícula ──
+import ListaMatricula      from './componentes/matricula/ListaMatricula';
+import FormularioMatricula from './componentes/matricula/FormularioMatricula';
 
 import './App.css';
 import './componentes/shared/Colores.css';
@@ -133,7 +130,7 @@ function App() {
         {/* Reportes — solo Profesor */}
         <Route path="/reportes"
           element={<RutaSoloProfesor><ReportesEstadisticos /></RutaSoloProfesor>} />
-      
+
         {/* Notas */}
         <Route path="/notas"
           element={<RutaProtegida><ListaNotas /></RutaProtegida>} />
@@ -144,15 +141,13 @@ function App() {
         <Route path="/notas/editar/:id"
           element={<RutaSoloProfesor><EditarNota /></RutaSoloProfesor>} />
 
-        {/* Matrícula (próximo) */}
-        {/*
+        {/* Matrícula */}
         <Route path="/matricula"
           element={<RutaProtegida><ListaMatricula /></RutaProtegida>} />
         <Route path="/matricula/crear"
           element={<RutaSoloProfesor><FormularioMatricula /></RutaSoloProfesor>} />
         <Route path="/matricula/editar/:id"
           element={<RutaSoloProfesor><FormularioMatricula /></RutaSoloProfesor>} />
-        */}
 
         {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />

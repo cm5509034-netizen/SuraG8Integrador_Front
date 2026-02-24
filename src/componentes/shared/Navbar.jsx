@@ -75,11 +75,12 @@ const SECCIONES_MODULOS = [
     ],
   },
   {
+    // ✅ ACTIVADO: módulo Matrícula integrado
     id: 'matricula',
     icono: '🏫',
     label: 'Matrícula',
-    soloProfesor: true,
-    proximamente: true,
+    soloProfesor: false,
+    proximamente: false,
     items: [
       { label: 'Ver Matrículas',  ruta: '/matricula',       soloProfesor: false },
       { label: 'Nueva Matrícula', ruta: '/matricula/crear', soloProfesor: true  },
