@@ -3,7 +3,7 @@
 // Mismo patrón que cursoService, profesorService, etc.
 // ====================================
 
-const API_URL = 'http://localhost:8080/apisura8/v1/matriculas';
+const API_URL = 'http://localhost:8080/apisurag8/v1/matricula';
 
 export const matriculaService = {
 

@@ -110,7 +110,7 @@ function Home() {
       color: 'dorado',
       disponible: true,
       soloProfesor: false,
-      proximamente: true,
+      proximamente: false,
     },
 
     // ===== MÓDULO ACTIVO: REPORTES (solo profesor) =====
